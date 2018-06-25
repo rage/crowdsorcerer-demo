@@ -1,5 +1,6 @@
 import TmcClient from 'tmc-client-js';
 import * as store from 'store';
+import nickGenerator from 'nick-generator';
 
 import initQuiznator from './quiznator';
 import initStudentDashboard from './student-dashboard';
@@ -21,8 +22,9 @@ class LoginModal {
 
     if(client.getUser()) {
       this.afterLogin();
-    } else if(window.location.pathname !== '/' && window.location.pathname !== '/ohjelmointi-18/') {
-      this.loginModalNode.modal('show');
+    } else {
+      // this.loginModalNode.modal('show');
+      this.generateRandomUsername();
     }
 
     this.loginModalToggleNode.on('click', this.onToggleLoginModal.bind(this));
@@ -108,6 +110,10 @@ class LoginModal {
     }
   }
 
+  generateRandomUsername() {
+    window.localStorage['tmc.user'] = `{"username":"${nickGenerator()}", "accessToken":"kissa"}`;
+  }
+
   onToggleLoginModal(e) {
     e.preventDefault();
 
@@ -120,7 +126,7 @@ class LoginModal {
         window.Quiznator.removeUser();
       } catch(e) {}
     } else {
-      this.loginModalNode.modal('show');
+      this.generateRandomUsername();
     }
 
     this.updateLoginButtonText();
