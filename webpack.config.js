@@ -15,8 +15,7 @@ module.exports = options => {
       loaders: [
         {
           test: /.js$/,
-          loaders: ['babel-loader'],
-          exclude: /node_modules/
+          loaders: ['babel-loader']
         },
         {
           test: /.scss$/,
