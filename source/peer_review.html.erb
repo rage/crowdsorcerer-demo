@@ -3,28 +3,42 @@
 ---
 
 <% partial 'partials/material_heading' do %>
-  Crowdsorcerer: Peer reviewing assignments
+  Peer reviewing assignments
 <% end %>
 
 <p>
-  This page should (:D) show you three assignments: one made by you, and two made by other people.
+  This page should (:D) show you three assignments: one made by you, and two made by other people. If you didn't complete creating an assignment, you will be shown three assignments made by other people.
 </p>
 
-<div class='crowdsorcerer-widget' data-assignment='6' peer-review></div>
+<% partial 'partials/hint', locals: { name: 'Peer review' } do %>
 
-<p>
-  Here be the instructions yo. But why is the Sorcerer invisible? This is too much magic for me, I'm starting to get nervous.
-</p>
+  <p>
+    Below you will find three assignments created in CrowdSorcerer: two by other students, and one for self-evaluation. The instructions the assignments are based on are included to refresh your memory.
+  </p>
 
-<p>
-  Oh, it was because I wasn't logged in. Shouldn't we have an error message for that? Or have we traveled so far back in time that we didn't actually have such things? Would be nice though.
-</p>
+  <p>
+    Inspect all the parts of the exercise: assignment, code template, model solution, inputs and the outputs. Evaluate their clarity, difficulty and how well they match the given instructions.
+  </p>
 
+  <p>
+    You can change the view between code template and model solution by clicking the buttons above the source code. Some questions have been given to make review process easier. Choose how well the statement applies to the exercise by choosing smileys from the scale. You should also give some written feedback. Lastly, add some tags that you think describe the exercise best and hit "Send".
+  </p>
 
-<% partial 'partials/material_sub_heading' do %>
-  Setup
+  <p>
+    Give a review for both the exercises done by other users, as well as your own.
+  </p>
+
+  <p>
+   Remember to be fair and friendly. Good feedback is honest, but supportive!
+  </p>
+
+  <p>
+    The assignments can be downloaded as a ZIP-file that includes both the code template and the model solution. This way you can test the program on the IDE of your choice.
+  </p>
 <% end %>
 
-<p>
-  Clone it.
-</p>
+<% partial 'partials/general_callout', locals: { name: 'Instructions for assignment under peer review: Scanners' } do %>
+  TODO: Write the same instructions as in assignment page here
+<% end %>
+
+<div class='crowdsorcerer-widget' data-assignment='1' peer-review data-exercises='3'></div>
