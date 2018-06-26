@@ -7,15 +7,11 @@
 <% end %>
 
 <p>
-  This is a demo page for CrowdSorcerer, a tool for crowdsourcing programming assignments. This page was originally implemented for ITiCSE 2018 presentation. The template for this page is the same as in our CS1 course materials so that we can illustrate the amazingness and embeddability of Crowdsorcerer properly.
+  This is a demo page for CrowdSorcerer, a tool for crowdsourcing programming assignments, developed by Agile Education Research group (RAGE), University of Helsinki. Full description of the tool can be found from the paper <a href="https://dl.acm.org/citation.cfm?id=3197117">Crowdsourcing programming assignments with CrowdSorcerer</a>. This page was originally implemented for ITiCSE 2018 presentation. The template for this page is the same as in University of Helsinki CS1 course materials so that we can illustrate the amazingness and embeddability of CrowdSorcerer properly.
 </p>
 
 <p>
-  After logging in from the top right corner, you can use CrowdSorcerer just like any student would with the widget below. If you want to add CrowdSorcerer to your own course material, follow the instructions found on the <a href="https://crowdsorcerer-demo.now.sh/setup/">Setup</a> page.
-</p>
-
-<p>
-  To see what goes on in the backend, pay a visit to <a href="https://crowdsorceress-demo.testmycode.io/">Crowdsorceress API</a>.
+  After logging in from the top right corner, you can use CrowdSorcerer just like any student would with the widget below.
 </p>
 
 <p>
@@ -28,28 +24,32 @@
 
 <% partial 'partials/hint', locals: { name: 'How to use CrowdSorcerer' } do %>
   <p>
-    Create an assignment according to the specified instructions given below. The assignment can be for example about printing or loops. Write a clear assignment where you shortly tell what is the basic idea of the program and the parameters used. You may use the exercises in the course material as an inspiration if you will. The purpose of the assignment is to describe the problem in such a detail that the programmer doing the exercise will know how to complete it.
+    These instuctions are translated from our Finnish CS1 course material.
+  </p>
+  
+  <p>
+    Create an assignment according to the specified instructions given below. The assignment can be for example about printing or loops. Write a clear assignment where you shortly tell what is the basic idea of the program and what are the parameters used. You may use the exercises in the course material as an inspiration if you will. The purpose of the assignment is to describe the problem in such a detail that the programmer doing the exercise will know how to complete it.
   </p>
 
   <p>
-    Then, write a model solution for the exercise. The source code field has a code template with locked rows in gray. These rows cannot be modified, as they are necessary for the program. Part of the code, called exercise template, are given to the person doing the exercise right from the beginning. By clicking the boxes next to the line numbers you can mark parts of your code as model solution. The marked rows won't be shown to the student doing the exercise. Thus, the code template will have the lines you don't mark with blue, including the locked lines. "Reset model solution" button returns the source code field back to its original state.
+    Then, write a model solution for the exercise. The source code field has an exercise template with locked lines in gray background. These rows cannot be modified, as they are necessary for the program. Part of the code, called code template, is given to the student doing the exercise right from the beginning. By clicking the boxes next to the line numbers you can mark parts of your code as model solution. The marked rows won't be shown to the student doing the exercise. Thus, the code template will have the lines you don't mark with blue, including the locked lines. "Reset model solution" button returns the source code field back to its original state.
   </p>
 
   <p>
-    Your model solution will be tested to ensure that it functions properly. You will determine how your solution should work in a certain situation, the tests implement this situation and then tell whether the program works as intended. Often programs function in a way that a user is asked for some information which the program processes, and then returns new information to the user. In this case, the information given by the user is called "input", and the information given by the program is called "output". Write an input and an output for the tests in the fields below. As you send the assignment, your model solution will be tested with the input given, and the output given by the program will be compared to the output given by you in the tests section. If the outputs do not match, the tool will tell you how the outputs differed from each other. You should write at least one input-output-pair, though the more the better.
+    Your model solution will be tested to ensure that it functions properly. You will determine how your solution should work in a certain situation, the tests implement this situation and then tell whether the program works as intended. Often programs function in a way that the user is asked for some information which the program processes, and then returns new information to the user. In this case, the information given by the user is called "input", and the information given by the program is called "output". Write an input and an output for the tests in the fields below. As you send the assignment, your model solution will be tested with the input given, and the output given by the program will be compared to the output given by you in the tests section. If the outputs do not match, CrowdSorcerer will tell you how the outputs differed from each other. You should write at least one input-output-pair, though the more the better.
   </p>
 
   <p>
-    Finally, give your assignment some descriptive tags. The tool will suggest some common tags, but feel free to come up with your own.
+    Finally, give your assignment some descriptive tags. CrowdSorcerer will suggest some commonly used tags, but feel free to come up with your own.
   </p>
 
   <p>
-    When you submit your assignment, it is sent to a server that tests both your code template and model solution. This will take some time, especially if there are multiple submissions being tested at the same time, so please be patient! If there are errors in your assignment, you will receive an error message to help you with corrections. You can resend your assignment as many times as you like, and the latest passed exercise will be given for peer review.
+    When you submit your assignment, it is sent to a server that tests both your code template and model solution. This will take some time, especially if there are multiple submissions being tested at the same time, so please be patient! If there are any errors in your assignment, you will receive an error message to help you with corrections. You can resend your assignment as many times as you like, and the latest passed exercise will be given for peer review.
   </p>
 <% end %>
 
-<% partial 'partials/general_callout', locals: { name: 'Create your own assignment: Scanners' } do %>
-  TODO: Write something instructional here
+<% partial 'partials/general_callout', locals: { name: 'Create your own assignment: For-loops' } do %>
+  In here, you should describe a general problem that the students will turn into an assignment. It can be for example: write a program that asks the user for a string input, processes it somehow using a for-loop and then prints a string output.
 <% end %>
 
 <div class='crowdsorcerer-widget' data-assignment='1'></div>

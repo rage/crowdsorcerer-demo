@@ -7,17 +7,20 @@
 <% end %>
 
 <p>
-  This page should (:D) show you three assignments: one made by you, and two made by other people. If you didn't complete creating an assignment, you will be shown three assignments made by other people.
+  This page shows you three assignments: one made by you, and two made by other people. If you didn't complete creating an assignment, you will be shown three assignments made by other people.
 </p>
 
 <% partial 'partials/hint', locals: { name: 'Peer review' } do %>
-
   <p>
-    Below you will find three assignments created in CrowdSorcerer: two by other students, and one for self-evaluation. The instructions the assignments are based on are included to refresh your memory.
+    As previously, these instructions are translated from our Finnish CS1 course material.
   </p>
 
   <p>
-    Inspect all the parts of the exercise: assignment, code template, model solution, inputs and the outputs. Evaluate their clarity, difficulty and how well they match the given instructions.
+    Below you will find three assignments created in CrowdSorcerer: two by other students, and one for self-evaluation. The instructions the assignments are based on are included to refresh your memory of the task.
+  </p>
+
+  <p>
+    Inspect all the parts of the exercise: assignment, code template, model solution, the inputs and the outputs. Evaluate their clarity, difficulty and how well they match the given instructions.
   </p>
 
   <p>
@@ -33,12 +36,12 @@
   </p>
 
   <p>
-    The assignments can be downloaded as a ZIP-file that includes both the code template and the model solution. This way you can test the program on the IDE of your choice.
+    The assignments can be downloaded as a ZIP-files containing the code template and the model solution separately. This way you can test the program on the IDE of your choice.
   </p>
 <% end %>
 
-<% partial 'partials/general_callout', locals: { name: 'Instructions for assignment under peer review: Scanners' } do %>
-  TODO: Write the same instructions as in assignment page here
+<% partial 'partials/general_callout', locals: { name: 'Instructions for assignment under peer review: For-loops' } do %>
+  In here, the general instructions for the assignment should be rewritten so that the students know what they are reviewing, even if they didn't do the exercise themselves. As previously, the task is: write a program that asks the user for a string input, processes it somehow using a for-loop and then prints a string output.
 <% end %>
 
 <div class='crowdsorcerer-widget' data-assignment='1' peer-review data-exercises='3'></div>
