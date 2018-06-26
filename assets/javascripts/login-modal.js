@@ -1,11 +1,11 @@
 import TmcClient from 'tmc-client-js';
 import * as store from 'store';
-import nickGenerator from 'nick-generator';
 
 import initQuiznator from './quiznator';
 import initStudentDashboard from './student-dashboard';
 import pheromones from './pheromones';
 import jsLogger from './js-logger';
+import nickGenerator from './nick-generator';
 
 const client = new TmcClient();
 
