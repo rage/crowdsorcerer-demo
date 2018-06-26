@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crowdsorcerer demo | Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link href="stylesheets/styles-4761fa27.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/xcode.min.css">
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.css" />
+
+    <link rel="stylesheet" href="https://materiaalit.github.io/code-states-visualizer-cdn/app.css" />
+    <link rel="stylesheet" href="https://materiaalit.github.io/typonator-cdn/app.css" />
+    <link rel="stylesheet" href="https://crowdsorceress-demo.testmycode.io/dist/app.css" />
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47575342-8', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="header-wrapper">
+        <div class="browser-support-warning" id="browser-support-warning" style="display: none;">
+  Kaikki tämän materiaalin osat eivät välttämättä tuo nykyistä selaintasi. Voisitko harkita vaihtamista <a href="https://www.google.com/chrome/browser/desktop/" target="_blank" rel="noopener">Chrome</a> tai <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener">Firefox</a> selaimeen?
+  <span class="browser-support-warning__close">Selvä!</span>
+</div>
+
+
+        <nav class="navbar navbar-light bg-white">
+  <a class="navbar-brand" href="http://mooc.fi/english.html" alt="MOOC" target="_blank" rel="noopener">
+    <span class="icon-mooc"></span>
+  </a>
+
+  <ul class="nav navbar-nav hidden-md-down">
+      <li class="nav-item active">
+        <a href="./" class="nav-link" onclick="ga('send', 'event', 'navigation_topic_link', 'click', '#&lt;Middleman::Sitemap::Resource path=index.html&gt;')">Assignment</a>
+      </li>
+      <li class="nav-item ">
+        <a href="peer_review/" class="nav-link" onclick="ga('send', 'event', 'navigation_topic_link', 'click', '#&lt;Middleman::Sitemap::Resource path=peer_review.html&gt;')">Peer review</a>
+      </li>
+      <li class="nav-item ">
+        <a href="setup/" class="nav-link" onclick="ga('send', 'event', 'navigation_topic_link', 'click', '#&lt;Middleman::Sitemap::Resource path=setup.html&gt;')">Setup</a>
+      </li>
+  </ul>
+
+  <div class="float-xs-right navbar__buttons">
+    <div class="dropdown" id="mobile-nav-dropdown">
+      <button class="btn btn-secondary dropdown-toggle navbar__mobile-nav-toggle" data-toggle="dropdown">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <div class="dropdown-menu">
+      </div>
+    </div>
+
+    <button class="btn btn-primary" id="tmc-login-toggle">Log in</button>
+  </div>
+</nav>
+
+      </div>
+
+      <div class="content-wrapper">
+        <div class="container material" id="material">
+
+          <h1 class="material-heading">
+    Introduction
+
+</h1>
+
+<p>
+  This is a demo page for CrowdSorcerer, a tool for crowdsourcing programming assignments. This page was originally implemented for ITiCSE 2018 presentation. The template for this page is the same as in our CS1 course materials so that we can illustrate the amazingness and embeddability of Crowdsorcerer properly.
+</p>
+
+<p>
+  After logging in from the top right corner, you can use CrowdSorcerer just like any student would with the widget below. If you want to add CrowdSorcerer to your own course material, follow the instructions found on the <a href="https://crowdsorcerer-demo.now.sh/setup/">Setup</a> page.
+</p>
+
+<p>
+  To see what goes on in the backend, pay a visit to <a href="https://crowdsorceress-demo.testmycode.io/">Crowdsorceress API</a>.
+</p>
+
+<p>
+  For latest releases, see GitHub repositories for <a href="https://github.com/rage/crowdsorceress/">Crowdsorceress (backend)</a> and <a href="https://github.com/rage/crowdsorcerer">CrowdSorcerer (frontend)</a>.
+</p>
+
+<h1 class="material-heading">
+    Creating assignments
+
+</h1>
+
+<div class="hint">
+  <div class="hint__header">
+    <i class="fa fa-info-circle hint__icon"></i>How to use CrowdSorcerer
+  </div>
+
+  <div class="hint__body">
+      <p>
+    Create an assignment according to the specified instructions given below. The assignment can be for example about printing or loops. Write a clear assignment where you shortly tell what is the basic idea of the program and the parameters used. You may use the exercises in the course material as an inspiration if you will. The purpose of the assignment is to describe the problem in such a detail that the programmer doing the exercise will know how to complete it.
+  </p>
+
+  <p>
+    Then, write a model solution for the exercise. The source code field has a code template with locked rows in gray. These rows cannot be modified, as they are necessary for the program. Part of the code, called exercise template, are given to the person doing the exercise right from the beginning. By clicking the boxes next to the line numbers you can mark parts of your code as model solution. The marked rows won't be shown to the student doing the exercise. Thus, the code template will have the lines you don't mark with blue, including the locked lines. "Reset model solution" button returns the source code field back to its original state.
+  </p>
+
+  <p>
+    Your model solution will be tested to ensure that it functions properly. You will determine how your solution should work in a certain situation, the tests implement this situation and then tell whether the program works as intended. Often programs function in a way that a user is asked for some information which the program processes, and then returns new information to the user. In this case, the information given by the user is called "input", and the information given by the program is called "output". Write an input and an output for the tests in the fields below. As you send the assignment, your model solution will be tested with the input given, and the output given by the program will be compared to the output given by you in the tests section. If the outputs do not match, the tool will tell you how the outputs differed from each other. You should write at least one input-output-pair, though the more the better.
+  </p>
+
+  <p>
+    Finally, give your assignment some descriptive tags. The tool will suggest some common tags, but feel free to come up with your own.
+  </p>
+
+  <p>
+    When you submit your assignment, it is sent to a server that tests both your code template and model solution. This will take some time, especially if there are multiple submissions being tested at the same time, so please be patient! If there are errors in your assignment, you will receive an error message to help you with corrections. You can resend your assignment as many times as you like, and the latest passed exercise will be given for peer review.
+  </p>
+
+  </div>
+</div>
+
+<div class="general-callout">
+  <div class="general-callout__header">
+    <i class="fa fa-magic general-callout__icon"></i> Create your own assignment: Scanners
+  </div>
+
+  <div class="general-callout__body">
+      TODO: Write something instructional here
+
+  </div>
+</div>
+
+<div class='crowdsorcerer-widget' data-assignment='1'></div>
+
+<h1 class="material-heading">
+    Then what?
+
+</h1>
+
+<p>
+  When you are done with your assignment, it is recommended to <a href="https://crowdsorcerer-demo.now.sh/peer_review/">peer review</a> some exercises other people have made.
+</p>
+        </div>
+      </div>
+
+      <div class="footer-wrapper">
+        <footer class="footer">
+  <div>
+    Crowdsorcerer is developed by the Agile Education Research group of University of Helsinki.
+  </div>
+    <div class="improvement">
+<a href="report_issue/" target="_blank" rel="noopener" class="btn btn-primary">    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    Report an issue
+</a>  <a href="https://github.com/rage/crowdsorcerer-demo" class="footer__github-link" target="_blank" rel="noopener">
+    <i class="fa fa-github"></i>
+  </a>
+</div>
+
+  </div>
+</footer>
+
+      </div>
+    </div>
+
+    <div class="modal fade" id="tmc-login-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form id="tmc-login-form">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Log in to your MOOC account</h4>
+        </div>
+        <div class="modal-body">
+
+          <div class="alert alert-danger" id="tmc-login-error" style="display: none;"></div>
+
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="tmc-login-username" class="form-control" placeholder="Username"/>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="tmc-login-password" class="form-control" placeholder="Password"/>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-secondary" data-dismiss="modal">Close</a>
+          <button type="submit" class="btn btn-primary">Log in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <div class="table-of-contents-layer" id="table-of-contents-layer">
+</div>
+
+<div class="table-of-contents" id="table-of-contents">
+  <h1 class="table-of-contents__heading">
+    Sisällysluettelo
+  </h1>
+
+  <div class="table-of-contents__content">
+    <ul id="table-of-contents-list"></ul>
+  </div>
+</div>
+
+
+    <script>
+  window._QUIZNATOR_ENABLED = true;
+</script>
+
+<script src="https://quiznator.mooc.fi/javascripts/plugin-loader.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	    crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+      window.SD_SHOW_SURVEY = ['part6', 'part7'].indexOf(window.location.pathname.replace(/\//g,'')) >= 0;
+    </script>
+
+    <script src="javascripts/scripts-9d9a916b.js"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch.js'></script>
+
+    <script>window.cookieconsent.initialise({"palette":{"popup":{"background":"#000"},"button":{"background":"#f1d600"}}, "position": "bottom-left"});</script>
+
+    <script src='https://materiaalit.github.io/code-states-visualizer-cdn/app.js'></script>
+    <script src='https://materiaalit.github.io/typonator-cdn/app.js'></script>
+    <script src='https://crowdsorceress-demo.testmycode.io/dist/app.js'></script>
+  </body>
+</html>
