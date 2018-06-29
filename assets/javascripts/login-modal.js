@@ -18,14 +18,12 @@ class LoginModal {
     this.loginUsernameNode = $('#tmc-login-username');
     this.loginPasswordNode = $('#tmc-login-password');
 
-    this.updateLoginButtonText();
-
-    if(client.getUser()) {
-      this.afterLogin();
-    } else {
+    if(!client.getUser()) {
       // this.loginModalNode.modal('show');
       this.generateRandomUsername();
     }
+    this.afterLogin();
+    this.updateLoginButtonText();
 
     this.loginModalToggleNode.on('click', this.onToggleLoginModal.bind(this));
     this.loginFormNode.on('submit', this.onSubmitLoginForm.bind(this));
@@ -111,7 +109,8 @@ class LoginModal {
   }
 
   generateRandomUsername() {
-    window.localStorage['tmc.user'] = `{"username":"${nickGenerator()}", "accessToken":"kissa"}`;
+    const nick = nickGenerator();
+    window.localStorage.setItem('tmc.user', `{"username":"${nick}", "accessToken":"kissa"}`);
   }
 
   onToggleLoginModal(e) {
@@ -124,9 +123,11 @@ class LoginModal {
         localStorage.removeItem('research-agreement')
         window.StudentDashboard.destroy();
         window.Quiznator.removeUser();
+        window.localStorage.removeItem('tmc.user');
       } catch(e) {}
     } else {
       this.generateRandomUsername();
+      this.afterLogin();
     }
 
     this.updateLoginButtonText();
